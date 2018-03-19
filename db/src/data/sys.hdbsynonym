@@ -1,0 +1,8 @@
+{
+  "mta_db_only.db.data::_DUMMY": {
+    "target": {
+      "object": "DUMMY",
+      "schema": "SYS"
+    }
+  }
+}

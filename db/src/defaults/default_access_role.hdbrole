@@ -1,0 +1,8 @@
+{
+	"role":{
+		"name": "default_access_role",
+		"schema_roles": [{
+		 "names": ["mta_db_only.db.roles::db_only_admin"]
+		}]
+	}
+}
