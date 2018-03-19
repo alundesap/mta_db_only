@@ -7,11 +7,28 @@ modules:
  - name: db
    type: hdb
    path: db
+   parameters:
+     host: db-only-deployer
    requires:
-    - name: hdi_db
+    - name: db-only-db
+
+
+ - name: xsjs
+   type: nodejs
+   path: xsjs
+   parameters:
+      memory: 128MB
+      host: db-only-xsjs
+   requires:
+    - name: db
+    - name: db-only-db
+   provides:
+    - name: xsjs_api
+      properties:
+         url: ${default-url}
 
 resources:
- - name: hdi_db
+ - name: db-only-db
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
